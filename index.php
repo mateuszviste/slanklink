@@ -24,6 +24,8 @@
  * Does not rely on a database, everything is stored in filesystem. No
  * external dependencies, requires only a web server with PHP support.
  *
+ * VERSION: 20200722
+ *
  * Copyright (C) 2020 Mateusz Viste
  *
  * SlankLink is open-source software, published under the terms of the ISC license.
