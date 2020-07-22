@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background: #fff;">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="slanklink.css">
 </head>
 
-<body style="font-family: sans; font-size: 1.2em">
+<body>
 
 <h1>SlankLink</h1>
 
 <form action="./lnk.php" method="post">
-<p style="text-align: center; margin-top: 3em;">
-<input type="text" name="url" style="width: 50em;">
+<p>
+<input type="text" name="url" class="urlentry">
 <input type="submit" value="save">
 </p>
 </form>
@@ -48,14 +48,14 @@ if (empty($url)) goto SKIP;
 // validate & adjust url
 if (stristr($url, '://') === FALSE) $url = 'http://' . $url;
 
-echo "<p style=\"text-align: center;\"><span style=\"color: #777;\">target url:</span> {$url}</p>\n";
+echo "<p><span class=\"grey\">target url:</span> {$url}</p>\n";
 $id = rand(0, 60466175);
 
 $ids = base_convert($id, 10, 36);
 
 if (file_exists($ids)) {
-  echo '<p style="background-color: #f66; font-weight: bold; text-align: center; padding: 0.5em;">ERROR: collision. try again.</p>';
-  echo "<p style=\"color: #777;\">orig id: {$id}<br>\n";
+  echo '<p class="error">ERROR: collision. try again.</p>';
+  echo "<p class=\"debug\">orig id: {$id}<br>\n";
   echo "encd id: {$ids}</p>\n";
   goto SKIP;
 }
@@ -71,7 +71,7 @@ $selfaddr_root .= $_SERVER['HTTP_HOST'];
 if (isset($_SERVER['SERVER_PORT']) && (intval($_SERVER['SERVER_PORT']) != 80)) $selfaddr_root .= ':' . $_SERVER['SERVER_PORT'];
 $selfaddr_root .= dirname($_SERVER['REQUEST_URI']);
 
-echo "<p style=\"text-align: center;\">short url: <a href=\"{$ids}\">{$selfaddr_root}{$ids}</a></p>";
+echo "<p>short url: <a href=\"{$ids}\">{$selfaddr_root}{$ids}</a></p>";
 
 SKIP:
 ?>

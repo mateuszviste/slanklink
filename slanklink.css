@@ -1,0 +1,34 @@
+html {
+  background-color: #fff;
+}
+
+body {
+  font-family: sans;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+h1 {
+  margin: 1.7em auto;
+  font-weight: normal;
+  font-size: 2em;
+  color: #333;
+}
+
+p.error {
+  background-color: #f66;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+p.debug {
+  color: #777;
+}
+
+input.urlentry {
+  width: 50em;
+}
+
+span.grey {
+  color: #777;
+}
