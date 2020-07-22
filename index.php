@@ -70,7 +70,7 @@ $selfaddr_root .= $_SERVER['HTTP_HOST'];
 if (isset($_SERVER['SERVER_PORT']) && (intval($_SERVER['SERVER_PORT']) != 80)) $selfaddr_root .= ':' . $_SERVER['SERVER_PORT'];
 $selfaddr_root .= dirname($_SERVER['REQUEST_URI']);
 
-echo "<p>short url: <a href=\"{$ids}\">{$selfaddr_root}{$ids}</a></p>";
+echo "<p><span class=\"grey\">short url:</span> <a href=\"{$ids}\">{$selfaddr_root}{$ids}</a></p>";
 
 SKIP:
 ?>
