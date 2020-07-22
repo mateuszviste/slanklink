@@ -13,11 +13,10 @@
 
 <form action="./lnk.php" method="post">
 <p>
-<input type="text" name="url" class="urlentry">
+<input type="text" name="url" class="urlentry" placeholder="enter your url here">
 <input type="submit" value="save">
 </p>
 </form>
-
 
 <?php
 
@@ -75,6 +74,5 @@ echo "<p>short url: <a href=\"{$ids}\">{$selfaddr_root}{$ids}</a></p>";
 
 SKIP:
 ?>
-
 </body>
 </html>
